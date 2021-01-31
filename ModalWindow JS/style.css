@@ -1,0 +1,77 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+button {
+	border: none;
+	padding: 10px 30px;
+	color: white;
+	background: rgba(0, 100, 250, 1);
+	margin: 50px;
+}
+
+.closeBtn {
+	cursor: pointer;
+	float: right;
+	font-size: 20px;
+	color: white;
+}
+
+
+.modal {
+	background: rgba(0, 0, 0, .3);
+	position: absolute;
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	perspective: 500px;
+}
+
+
+.modal .modal-wrapper {
+	width: 50%;
+	height: auto;
+	max-width: 500px;
+	top: 15%;
+	background:  rgba(0, 100, 250, 1);
+	position: absolute;
+	text-align: left;
+	box-shadow: 0  0 13px 0 rgba(0, 0, 0 .4 );
+	transform: rotateX(0deg);
+	animation-name: modal;
+	animation-duration: 1s; 
+}
+
+.modal-header, .modal-body, .modal-footer {
+	padding: 15px 25px;
+} 
+
+.modal-body {
+	background: #FFF;
+}
+
+.modal-header, .modal-footer {
+	text-align: center;
+	color: white;
+}
+
+
+@keyframes modal {
+	from {
+		opacity: 0;
+		top: 5%;
+		transform: rotateX(15deg);
+	}
+	to {
+		opacity: 1;
+		top: 15%;
+		transform: rotateX(0deg);
+	}
+}
