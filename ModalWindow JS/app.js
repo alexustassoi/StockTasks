@@ -17,3 +17,5 @@ window.addEventListener('click', function(event) {
     modal.style.display = 'none';
   }
 });
+
+let regex = /(([A-Z]{1}\W*)(56\W*))/g;
